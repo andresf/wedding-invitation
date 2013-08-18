@@ -1,0 +1,14 @@
+#invitation {
+  background-image: url("sobre.png");
+  background-size: cover;
+  width: 600px;
+  height: 800px;
+  margin: auto;
+}
+
+#name {
+  color: white;
+  display: inline-block;
+  padding: 40%;
+  text-align: center;
+}
