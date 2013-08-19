@@ -1,14 +1,78 @@
-#invitation {
-  background-image: url("sobre.png");
-  background-size: cover;
-  width: 600px;
-  height: 800px;
-  margin: auto;
+/*
+  Fonts
+ */
+@font-face {
+  font-family: 'BlessedDay';
+  src: url('blessed-day.eot');
 }
 
-#name {
-  color: white;
-  display: inline-block;
-  padding: 40%;
+@font-face {
+  font-family: 'BlessedDay';
+  src: url('blessed-day.woff') format('woff'),
+       url('blessed-day.svg#BlessedDay') format('svg');
+}
+
+/* Body */
+body {
+  background: url('bg.gif');
+  font-family: 'BlessedDay', script;
+  font-size: 48px;
+  line-height: 0.75;
+}
+
+#wrapper {
+  height: 800px;
+  margin: auto;
+  position: relative;
+  width: 532px;
+}
+
+/* Invitation mama */
+#back {
+  background: url("back.jpg") no-repeat center center;
+  height: 800px;
+  margin: auto;
+  width: 532px;
+}
+
+#back, #front, #invitation {
+  position: absolute;
+}
+
+/* tunombre yatusabe */
+.name {
+  color: #333;
+  cursor: pointer;
+  display: block;
+  height: 65px;
+  left: 50%;
+  margin: 0 0 0 -93px;
+  padding: 15px 20px 20px;
+  position: absolute;
   text-align: center;
+  top: 212px;
+  width: 145px;
+}
+
+/* Ejemplo de ajuste ajustador */
+#id_1 {
+  font-size: 42px;
+  padding: 15px 10px 20px;
+  width: 165px;
+}
+
+/* Front */
+#front {
+  background: url("front.jpg") no-repeat center center;
+  height: 800px;
+  margin: auto;
+  width: 532px;
+}
+
+/* Invitation */
+#invitation {
+  background: url("invitation.jpg") no-repeat center center;
+  height: 800px;
+  margin: auto;
+  width: 532px;
 }

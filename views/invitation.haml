@@ -1,6 +1,22 @@
 !!!
 %head
+  %title
+    = "Invitación para " + @name
+
   %link(rel="stylesheet" type="text/css" href="style.css")
+
 %body
-  #invitation
-    %span{id: "name", class: @id.to_s}= @name
+
+  #wrapper
+    %section#back
+      %span{class: "name", id: "id_" + @id.to_s}
+        = @name
+
+    %section#front
+
+    %section#invitation
+
+      -# COSO AQUI
+
+  %script{src: "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"}
+  %script{src: "scripts.js"}
