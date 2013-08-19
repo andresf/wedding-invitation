@@ -20,6 +20,7 @@ $(document).ready(function() {
     $('body').on('click', function() {
 
         if (!isdummy) {
+            isdummy = false;
             HOWDOICOMPUTER();
         }
 
@@ -28,6 +29,7 @@ $(document).ready(function() {
     /* Timeout for DUMMIES */
     timeout = setTimeout(function() {
         if (!isdummy) {
+            isdummy = false;
             HOWDOICOMPUTER();
         }
     }, 7000);
