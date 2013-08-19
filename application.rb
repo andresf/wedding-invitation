@@ -2,7 +2,9 @@ require 'sinatra'
 require 'csv'
 
 get "/:id" do
-  if @name = get_name(params[:id])
+  @id = params[:id]
+
+  if @name = get_name(@id)
     haml :invitation
   else
     [404, "not found"]
