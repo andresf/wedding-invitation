@@ -71,8 +71,8 @@ body {
 
 /* Invitation */
 #invitation {
-  background: url("invitation.jpg") no-repeat center center;
-  height: 800px;
+  background: url("invitation.jpg") no-repeat top;
   margin: auto;
+  padding-top: 800px;
   width: 532px;
 }
