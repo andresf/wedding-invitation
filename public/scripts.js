@@ -7,9 +7,31 @@ var HOWDOICOMPUTER = function() {
         $('#invitation').fadeIn(3500);
     });
 
-}
+};
 
-$(document).ready(function() {
+var preloader = function() {
+    var preload = ['bg.gif', 'back.jpg', 'front.jpg', 'invitation.jpg'],
+        promises = [],
+        i;
+
+    for (i = 0; i < preload.length; i++) {
+
+        (function(url, promise) {
+            var img = new Image();
+            img.onload = function() {
+              promise.resolve();
+            };
+            img.src = url;
+        })(preload[i], promises[i] = $.Deferred());
+
+    }
+
+    $.when.apply($, promises).done(function() {
+      init();
+    });
+};
+
+var init = function() {
     var isdummy = false,
         timeout;
 
@@ -33,5 +55,8 @@ $(document).ready(function() {
             HOWDOICOMPUTER();
         }
     }, 7000);
+};
 
+$(document).ready(function() {
+    preloader();
 });
